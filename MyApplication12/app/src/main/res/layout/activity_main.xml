@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="欢迎来到报名系统"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TableRow android:gravity="center">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:padding="10dp"
+            android:src="@drawable/back1" />
+    </TableRow>
+
+    <TableLayout>
+
+        <TableRow android:layout_marginTop="10dp">
+            <TextView
+                android:text="选手用户名:"
+                android:textSize="24sp"/>
+
+            <EditText android:layout_weight="1"
+                android:id="@+id/account"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="选手密码："
+                android:textSize="24sp" />
+            <EditText android:layout_weight="1"
+                android:id="@+id/password"
+                android:password="true"/>
+        </TableRow>
+    </TableLayout>
+
+    <CheckBox
+        android:id="@+id/remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="记住密码" />
+
+    <CheckBox
+        android:id="@+id/agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="同意参赛协议" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/loginButton"
+            android:text="登录"
+            android:textSize="20sp"
+            android:layout_height="50dp"
+            android:layout_width="200dp"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:text="没有账号？"
+            android:textSize="20sp"
+            android:layout_height="50dp"
+            android:layout_width="200dp"/>
+    </LinearLayout>
+
+</TableLayout>
